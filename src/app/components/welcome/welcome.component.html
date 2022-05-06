@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card" style="text-align:center;">
+        <h4 class="card-header">SpendWisr</h4>
+        <div class="card-body">
+            <form>
+                <app-carousel></app-carousel>
+                <br>
+                <span>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select User</mat-label>
+                        <mat-select (selectionChange)="selectUser($event.value)" >
+                            <mat-option value="1212121">User 1</mat-option>
+                            <mat-option value="3453453">User 2</mat-option>
+                            <mat-option value="789789">User 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </span>
+                <br>
+                <br>
+                <span>
+                    <button type="button" class="btn btn-danger" (click)="BankLogin()">
+                        Demo Bank Login
+                    </button>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>
