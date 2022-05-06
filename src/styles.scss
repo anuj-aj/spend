@@ -1,0 +1,32 @@
+// /* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/scss/bootstrap';
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #13294b;
+}
+
+body * {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+.mat-typography{
+  background-color: #13294b;
+}
+
+.mat-checkbox-inner-container{
+  border: none !important;
+
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~ngx-toastr/toastr.css';

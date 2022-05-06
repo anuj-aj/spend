@@ -1,0 +1,46 @@
+<h1 style="display:flex; justify-content: center;  background-color: grey;
+color: #47d7ac;">Statement</h1>
+<div class="board">
+  <!-- <button *ngIf="userName" mat-button class="select-btn" [disabled]>Welcome Account {{userName}}</button> -->
+  <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable"> Display Category</button>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- descr Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+    <!-- dt Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.txnDate | date}} </td>
+    </ng-container>
+
+    <!-- amt Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+    </ng-container>
+
+    <!-- currency Column -->
+    <ng-container matColumnDef="currency">
+      <th mat-header-cell *matHeaderCellDef> Currency </th>
+      <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+    </ng-container>
+
+    <ng-container *ngIf="categories$ | async" matColumnDef="categories">
+      <th mat-header-cell *matHeaderCellDef> Category </th>
+      <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[ 5, 10, 25, 100 ]">
+  </mat-paginator>
+</div>
