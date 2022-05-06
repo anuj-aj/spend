@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { AllRecordDetails, recordDetails } from 'src/app/model/transaction';
 import { User } from 'src/app/model/User';
 import { DataSharingService } from '../../service/data-sharing.service'
 @Component({
@@ -56,6 +57,7 @@ export class ToolbarComponent implements OnInit, OnChanges {
     this.dataSharingService.isUserLoggedIn = false;
     this.dataSharingService.username = ""
     this.dataSharingService.user = new User()
+    this.dataSharingService.txnRecords = (new AllRecordDetails())   
     this.opened = false
     if (localStorage.getItem('isLogged') == 'true') {
       localStorage.setItem('isLogged', 'false');
