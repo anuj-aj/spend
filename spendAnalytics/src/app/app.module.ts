@@ -15,7 +15,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ToastrModule } from 'ngx-toastr';
 import {DataSharingService } from '../app/service/data-sharing.service';
-import { ProfileComponent } from './components/profile/profile.component'
+import { ProfileComponent } from './components/profile/profile.component';
+import { AnalyticsComponent } from './components/analytics/analytics.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfileComponent } from './components/profile/profile.component'
     CarouselComponent,
     WelcomeComponent,
     ToolbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    AnalyticsComponent
   ],
   imports: [
     BrowserModule,

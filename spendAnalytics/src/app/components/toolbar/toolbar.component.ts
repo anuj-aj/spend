@@ -76,4 +76,8 @@ export class ToolbarComponent implements OnInit, OnChanges {
     const id = localStorage.getItem('accountId');
     this.router.navigate([`profile/${id}`])
   }
+
+  goToAnalytics():void {
+    this.router.navigate([`analytics`])
+  }
 }

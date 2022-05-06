@@ -67,6 +67,7 @@ export class TrxnBoardComponent implements OnInit {
             this.dataSource.paginator = this.paginator;
           }
         )
+        
       }
     )
   }
@@ -91,7 +92,9 @@ export class TrxnBoardComponent implements OnInit {
         this.dataSource = new MatTableDataSource<recordDetails>(this.txnRecords.data);
         this.dataSource.paginator = this.paginator;
         this.btnDisable = !this.btnDisable
-        this.dataSharingService.user.type = User.setUserType(this.txnRecords);        
+        this.dataSharingService.user.type = User.setUserType(this.txnRecords);    
+        this.dataSharingService.txnRecords = this.txnRecords;
+        console.log(this.dataSharingService.txnRecords);    
         this.toastr.success("Categories generated successfully")
       }
     );
