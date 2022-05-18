@@ -28,6 +28,7 @@ export class TrxnBoardComponent implements OnInit {
   dataSource!: MatTableDataSource<recordDetails>;
   categories$!: Observable<boolean>;
   btnDisable = false;
+  dontUpdateTransaction = false;
   
   userLoggedIn!:User;
 
@@ -40,8 +41,11 @@ export class TrxnBoardComponent implements OnInit {
   ngOnInit(): void {
     const id: number = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.userName = id as unknown as string;
-    this.getAccount(id);
-    this.txnRecords.data = []
+    if(!this.dontUpdateTransaction){
+      this.getAccount(id);
+      this.txnRecords.data = []
+    }
+    
   }
   
   getAccount(id: number) {
@@ -66,8 +70,7 @@ export class TrxnBoardComponent implements OnInit {
             this.dataSource = new MatTableDataSource<recordDetails>(this.txnRecords.data);
             this.dataSource.paginator = this.paginator;
           }
-        )
-        
+        )        
       }
     )
   }
@@ -77,6 +80,7 @@ export class TrxnBoardComponent implements OnInit {
       (response) => {
         console.log(" data incoming")
         this.categories$ = of(true);
+        this.dontUpdateTransaction = true;
         response.data.map(
           (txnRecord) => {
             // let record = this.txnRecords.data.find(r => {
