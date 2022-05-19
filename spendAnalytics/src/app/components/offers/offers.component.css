@@ -1,0 +1,11 @@
+mat-grid-tile {
+    background: lightblue;
+}
+.offerBoard{
+    padding: 20px;
+    width: 100%;
+  }
+.mat-grid-tile {
+    border: solid 5px #47d7ac;
+    border-radius: 2px;
+}  

@@ -82,4 +82,9 @@ export class ToolbarComponent implements OnInit, OnChanges {
   goToAnalytics():void {
     this.router.navigate([`analytics`])
   }
+
+  goToOffers():void {
+    this.router.navigate([`offers`])
+  }
+
 }

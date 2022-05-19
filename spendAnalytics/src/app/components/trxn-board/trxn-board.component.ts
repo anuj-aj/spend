@@ -9,6 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ToastrService } from 'ngx-toastr';
 import { DataSharingService } from 'src/app/service/data-sharing.service';
 import { User } from 'src/app/model/User';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-trxn-board',
@@ -29,13 +30,14 @@ export class TrxnBoardComponent implements OnInit {
   categories$!: Observable<boolean>;
   btnDisable = false;
   dontUpdateTransaction = false;
-  
+  userCategory!:string;
   userLoggedIn!:User;
 
   constructor(private httpService: HttpServiceService,
     private location: Location,
     private activatedRoute: ActivatedRoute,
     private toastr:ToastrService,
+    private http:HttpClient,
     private dataSharingService: DataSharingService) { }
 
   ngOnInit(): void {
@@ -96,8 +98,8 @@ export class TrxnBoardComponent implements OnInit {
         this.dataSource = new MatTableDataSource<recordDetails>(this.txnRecords.data);
         this.dataSource.paginator = this.paginator;
         this.btnDisable = !this.btnDisable
-        this.dataSharingService.user.type = User.setUserType(this.txnRecords);    
         this.dataSharingService.txnRecords = this.txnRecords;
+        this.setUserCategory(this.txnRecords);   
         console.log(this.dataSharingService.txnRecords);    
         this.toastr.success("Categories generated successfully")
       }
@@ -107,6 +109,14 @@ export class TrxnBoardComponent implements OnInit {
 
   redirect(): void {
     this.location.back()
+  }
+
+  setUserCategory(records:AllRecordDetails): void {
+    let url = `http://127.0.0.1:8000/getusercategory`;
+    let response = this.http.post(url, records, { responseType: 'json' });
+    response.subscribe((res:any)=>{
+      this.dataSharingService.user.type = res;
+    })
   }
 
 

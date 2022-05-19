@@ -81,3 +81,10 @@ export class IdCategoryRecordList {
     data!: IdCategoryRecord[];
 }
 
+export class Brand {
+    brandname!: string;
+    offerDescription!: string;
+    offerValidity!: string;
+    competitors!:string[];
+}
+

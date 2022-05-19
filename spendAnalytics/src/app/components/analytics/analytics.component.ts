@@ -27,7 +27,7 @@ export class AnalyticsComponent implements OnInit {
   }
 
   getTopTransactions(): void {
-    let url = `http://127.0.0.1:8000/gettoptxns`;
+    let url = `http://127.0.0.1:8000/gettoptxnsv1`;
     let response = this.http.post(url, this.data, { responseType: 'json' });
     response.subscribe((res)=>{
       this.topTxnList = res;
