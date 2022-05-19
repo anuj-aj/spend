@@ -1,0 +1,24 @@
+<h1 style="display:flex; justify-content: center;  background-color: grey;
+color: #47d7ac;">Offers</h1>
+<div class="offerBoard">
+    <mat-grid-list cols="2" rowHeight="200px">
+        <mat-grid-tile>General Offer 1</mat-grid-tile>
+        <mat-grid-tile>General Offer 2</mat-grid-tile>
+        <mat-grid-tile>Customised Offer 1
+            <br>
+            {{this.offerList[0].brandname}}
+            <br>
+            {{this.offerList[0].offerDescription}}
+            <br>
+            {{this.offerList[0].offerValidity}}
+        </mat-grid-tile>
+        <mat-grid-tile>Customised Offer 2
+            <br>
+            {{this.offerList[0].brandname}}
+            <br>
+            {{this.offerList[0].offerDescription}}
+            <br>
+            {{this.offerList[0].offerValidity}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
