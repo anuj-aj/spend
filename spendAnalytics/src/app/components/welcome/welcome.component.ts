@@ -38,10 +38,9 @@ export class WelcomeComponent implements OnInit {
   BankLogin(): void {
     if (this.httpService.accountValidator(this.accountIdNumber)) {
       this.dataSharingService.isUserLoggedIn = true
-      this.dataSharingService.username = this.accountIdNumber as unknown as string;
       this.dataSharingService.user = new User();
+      this.dataSharingService.setUser(this.accountIdNumber);
       this.dataSharingService.user.accountId = this.accountIdNumber as unknown as string;
-      this.dataSharingService.user.username = this.accountIdNumber as unknown as string;
       localStorage.setItem("isLogged",'true');
       localStorage.setItem('accountId',this.accountIdNumber as unknown as string)
       this.router.navigate([`/dashboard/${this.accountIdNumber}`])
