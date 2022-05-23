@@ -8,9 +8,8 @@ import {AllRecordDetails, IdCategoryRecord, IdCategoryRecordList, recordDetails,
 })
 export class HttpServiceService {
 
-  BASE_URL = `https://psd2-api.openbankproject.com/obp/v4.0.0/banks/psd201-bank-x--uk/accounts/`;
-  BASE_URL_FastApi = `http://127.0.0.1:8000/predictcategory`;
-  
+  BASE_URL_OB = `https://psd2-api.openbankproject.com/obp/v4.0.0/banks/psd201-bank-x--uk/accounts/`;
+  BASE_URL = `https://spend.herokuapp.com`;
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json',
                                 'Authorization': 'DirectLogin token=eyJhbGciOiJIUzI1NiJ9.eyIiOiIifQ.FqWSv-sznrXIvEOkeY_KLX-MLW2IO4XCvEaVJTpPels'       })
@@ -22,7 +21,7 @@ export class HttpServiceService {
   constructor(private httpClient:HttpClient) { }
 
   getTransactionRecords(id:number): Observable<any> {
-    return this.httpClient.get<trxnRequests>(this.BASE_URL + `${id}` + '/owner/transaction-requests',this.httpOptions).pipe(
+    return this.httpClient.get<trxnRequests>(this.BASE_URL_OB + `${id}` + '/owner/transaction-requests',this.httpOptions).pipe(
       catchError(this.handleError<trxnRequests>('getTransactionRecords',new trxnRequests()))
     );
   }
@@ -35,7 +34,7 @@ export class HttpServiceService {
   }
 
   sendToModel(data: AllRecordDetails): Observable<IdCategoryRecordList> {
-    return this.httpClient.post<IdCategoryRecordList>(this.BASE_URL_FastApi ,data,this.httpOptions2).pipe(
+    return this.httpClient.post<IdCategoryRecordList>(this.BASE_URL + `/predictcategory` ,data,this.httpOptions2).pipe(
       catchError(this.handleError<IdCategoryRecordList>('Model API',new IdCategoryRecordList))
     );
   }

@@ -32,6 +32,7 @@ export class TrxnBoardComponent implements OnInit {
   dontUpdateTransaction = false;
   userCategory!:string;
   userLoggedIn!:User;
+  BASE_URL = "https://spend.herokuapp.com"
 
   constructor(private httpService: HttpServiceService,
     private location: Location,
@@ -112,7 +113,7 @@ export class TrxnBoardComponent implements OnInit {
   }
 
   setUserCategory(records:AllRecordDetails): void {
-    let url = `http://127.0.0.1:8000/getusercategory`;
+    let url = this.BASE_URL + `/getusercategory`;
     let response = this.http.post(url, records, { responseType: 'json' });
     response.subscribe((res:any)=>{
       this.dataSharingService.user.type = res;

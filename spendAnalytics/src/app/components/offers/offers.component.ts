@@ -17,6 +17,8 @@ export class OffersComponent implements OnInit {
   imgBar!:any;
   topTxnList!:any;
   offerList:Brand[] = [];
+  BASE_URL = "https://spend.herokuapp.com";
+  
 
   constructor(
     private dataSharingService: DataSharingService,
@@ -29,7 +31,7 @@ export class OffersComponent implements OnInit {
   }
 
   getTopTransactions(): void {
-    let url = `http://127.0.0.1:8000/gettoptxnsv1`;
+    let url = this.BASE_URL + `/gettoptxnsv1`;
     let response = this.http.post(url, this.data, { responseType: 'json' });
     response.subscribe((res)=>{
       this.topTxnList = res;

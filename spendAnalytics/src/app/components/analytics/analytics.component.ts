@@ -14,6 +14,7 @@ export class AnalyticsComponent implements OnInit {
   imgPie!:any;
   imgBar!:any;
   topTxnList!:any;
+  BASE_URL = "https://spend.herokuapp.com"
 
   constructor(private router: Router,
     private dataSharingService: DataSharingService,
@@ -27,7 +28,7 @@ export class AnalyticsComponent implements OnInit {
   }
 
   getTopTransactions(): void {
-    let url = `http://127.0.0.1:8000/gettoptxnsv1`;
+    let url = this.BASE_URL + `/gettoptxnsv1`;
     let response = this.http.post(url, this.data, { responseType: 'json' });
     response.subscribe((res)=>{
       this.topTxnList = res;
@@ -36,7 +37,7 @@ export class AnalyticsComponent implements OnInit {
   }
 
   getPieImage(): void {
-    let url = `http://127.0.0.1:8000/pie`;
+    let url = this.BASE_URL + `/pie`;
     let response = this.http.post(url, this.data, { responseType: 'blob' });
     response.subscribe((res)=>{
       const reader = new FileReader();
@@ -49,7 +50,7 @@ export class AnalyticsComponent implements OnInit {
   }
 
   getBarImage(): void {
-    let url = `http://127.0.0.1:8000/bar`;
+    let url = this.BASE_URL + `/bar`;
     let response = this.http.post(url, this.data, { responseType: 'blob' });
     response.subscribe((res)=>{
       const reader = new FileReader();
