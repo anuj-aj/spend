@@ -1,1 +1,0 @@
-This is front end project for SpendWisr
