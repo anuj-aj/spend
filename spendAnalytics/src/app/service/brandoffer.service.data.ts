@@ -2,7 +2,7 @@ import { Brand } from "../model/transaction";
 
 export const Grofers: Brand = {
     brandname: "Zepto",
-    offerDescription: "Offer Groffers description",
+    offerDescription: "Offer Zepto description",
     offerValidity: "15 June 2022",
     competitors:["BB DAILY","GROFERS INDIA P"]
 }
