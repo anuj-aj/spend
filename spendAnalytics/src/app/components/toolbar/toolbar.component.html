@@ -23,13 +23,13 @@
   <mat-sidenav [fixedInViewport]=true [fixedTopGap]="65" [fixedBottomGap]="300"  class="example-container-nav" #sidenav
     mode="side" [(opened)]="opened">
     <mat-nav-list>
-      <mat-list-item >
+      <!-- <mat-list-item >
         <mat-icon mat-list-icon>home</mat-icon>
         <div fxFlex="10"></div>
         <div class="sidenav-item">
           <h5 >Home</h5>
         </div>
-      </mat-list-item>
+      </mat-list-item> -->
 
       <mat-list-item routerLink="/dashboard" routerLinkActive="active" (click)="redirect()">
         <mat-icon mat-list-icon>library_books</mat-icon>
