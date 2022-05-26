@@ -1,12 +1,23 @@
 .example-card {
-    max-width: 400px;
-      }
-  
-  .example-header-image {
-    background-image: url('./../../../assets/images/userface.jpg');
-    background-size: cover;
-  }
-  .profile{
-    display: flex;
-    justify-content: center;
-  }
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('./../../../assets/images/userface.jpg');
+  background-size: cover;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.select-btn {
+  background-color: #47d7ac;
+  color: black;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
