@@ -7,10 +7,16 @@
   </span>
   <span class="fill-space"></span>
   
-  <!-- <button class="logoutLogo" mat-mini-fab *ngIf="isLoggedin == true " (click)="logOut()">
+
+  <button class="profileLogo" mat-mini-fab *ngIf="isLoggedin == true " (click)="goToProfile()">
+    <mat-icon>person</mat-icon>
+  </button>
+
+  <button class="logoutLogo" mat-mini-fab *ngIf="isLoggedin == true " (click)="logOut()">
     <mat-icon>output</mat-icon>
-  </button> -->
-  <h1 *ngIf="userName !== '' ">Welcome Account {{userName}}</h1>
+  </button>
+<!-- 
+  <h1 *ngIf="userName !== '' ">Welcome Account {{userName}}</h1> -->
 </mat-toolbar>
 
 <mat-sidenav-container class="example-container">
@@ -25,28 +31,28 @@
         </div>
       </mat-list-item>
 
-      <mat-list-item (click)="redirect()">
+      <mat-list-item routerLink="/dashboard" routerLinkActive="active" (click)="redirect()">
         <mat-icon mat-list-icon>library_books</mat-icon>
         <div fxFlex="10"></div>
         <div class="sidenav-item">
           <h5 class="lead">View Statement</h5>
         </div>
       </mat-list-item>
-      <mat-list-item (click)="goToAnalytics()">
+      <mat-list-item routerLink="/analytics" routerLinkActive="active">
         <mat-icon mat-list-icon>bar_chart</mat-icon>
         <div fxFlex="10"></div>
         <div class="sidenav-item">
           <h5 class="lead">Analytics</h5>
         </div>
       </mat-list-item>
-      <mat-list-item (click)="goToOffers()">
+      <mat-list-item routerLink="/offers" routerLinkActive="active" (click)="goToOffers()" >
         <mat-icon mat-list-icon>local_offer</mat-icon>
         <div fxFlex="10"></div>
         <div class="sidenav-item">
           <h5 class="lead">Offers</h5>
         </div>
       </mat-list-item>
-      <mat-list-item (click)="goToProfile()">
+      <!-- <mat-list-item (click)="goToProfile()">
         <mat-icon mat-list-icon>person</mat-icon>
         <div fxFlex="10"></div>
         <div class="sidenav-item">
@@ -60,7 +66,7 @@
         <div class="sidenav-item" (click)="logOut()">
           <h5 class="lead">Logout</h5>
         </div>
-      </mat-list-item>
+      </mat-list-item> -->
     </mat-nav-list>
   </mat-sidenav>
 

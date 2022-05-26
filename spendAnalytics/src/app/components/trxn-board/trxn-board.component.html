@@ -1,5 +1,9 @@
-<h1 style="display:flex; justify-content: center;  background-color: grey;
-color: #47d7ac;">Statement</h1>
+<div class="headerTitle">
+  <div class="headerTitleInner">
+    <button  mat-raised-button class="select-btn">Statement</button>
+  </div>
+</div>
+
 <div class="board">
   <!-- <button *ngIf="userName" mat-button class="select-btn" [disabled]>Welcome Account {{userName}}</button> -->
   <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable"> Display Category</button>

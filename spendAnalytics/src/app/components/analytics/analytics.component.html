@@ -1,21 +1,23 @@
-<h1 style="display:flex; justify-content: center;  background-color: grey;
-color: #47d7ac;">Analytics Dashboard</h1>
-
+<div class="headerTitle">
+    <div class="headerTitleInner">
+      <button  mat-raised-button class="select-btn">Analytics Dashboard</button>
+    </div>
+  </div>
 <div class="board">
-    <mat-grid-list cols="9" rowHeight="235px">
+    <mat-grid-list cols="9" rowHeight="220px" [gutterSize]="'20px'">
         <mat-grid-tile [colspan]="4" [rowspan]="1">
-            <img height="300px" width="800px" [src]="imgPie">
+            <img height="300px" width="500px" [src]="imgPie">
         </mat-grid-tile>
         <mat-grid-tile [colspan]="5" [rowspan]="2">
-            <img height="400px" width="650px" [src]="imgBar">
+            <img height="400px" width="600px" [src]="imgBar">
         </mat-grid-tile>
-        <mat-grid-tile [colspan]="4" [rowspan]="1">
-            <mat-grid-tile-header style="font-size: large; display:flex; justify-content: center;  background-color: grey;
-            color: #47d7ac;">
+        <mat-grid-tile style="background-color: #ECECEC;" [colspan]="4" [rowspan]="1">
+            <mat-grid-tile-header style="font-size: large; display:flex; justify-content: center;  background-color: white;
+            color: black;">
                 <h1>Top 4 Transactions</h1>
             </mat-grid-tile-header>
-            <div>
-                <h4 style="color: #47d7ac" *ngFor="let txn of topTxnList; let i = index">
+            <div >
+                <h4 style="color: black" *ngFor="let txn of topTxnList; let i = index">
                     {{i}}. {{txn}}
                 </h4>
             </div>

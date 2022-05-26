@@ -1,9 +1,24 @@
-<h1 style="display:flex; justify-content: center;  background-color: grey;
-color: #47d7ac;">Offers</h1>
+<div class="headerTitle">
+    <div class="headerTitleInner">
+        <button mat-raised-button class="select-btn">General Offers</button>
+    </div>
+</div>
 <div class="offerBoard">
-    <mat-grid-list cols="2" rowHeight="200px">
+
+    <mat-grid-list cols="2" rowHeight="155px" [gutterSize]="'20px'">
         <mat-grid-tile>General Offer 1</mat-grid-tile>
         <mat-grid-tile>General Offer 2</mat-grid-tile>
+    </mat-grid-list>
+</div>
+<br>
+<br>
+<div class="headerTitle">
+    <div class="headerTitleInner">
+        <button mat-raised-button class="select-btn">Custom Offers</button>
+    </div>
+</div>
+<div class="offerBoard">
+    <mat-grid-list cols="2" rowHeight="155px" [gutterSize]="'20px'">
         <mat-grid-tile>Customised Offer 1
             <br>
             {{this.offerList[0].brandname}}
@@ -14,11 +29,13 @@ color: #47d7ac;">Offers</h1>
         </mat-grid-tile>
         <mat-grid-tile>Customised Offer 2
             <br>
-            {{this.offerList[0].brandname}}
+            {{this.offerList[1].brandname}}
             <br>
-            {{this.offerList[0].offerDescription}}
+            {{this.offerList[1].offerDescription}}
             <br>
-            {{this.offerList[0].offerValidity}}
+            {{this.offerList[1].offerValidity}}
         </mat-grid-tile>
     </mat-grid-list>
+
+
 </div>

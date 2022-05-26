@@ -7,7 +7,7 @@ import { DataSharingService } from 'src/app/service/data-sharing.service';
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',
-  styleUrls: ['./analytics.component.css']
+  styleUrls: ['./analytics.component.scss']
 })
 export class AnalyticsComponent implements OnInit {
   data!:AllRecordDetails

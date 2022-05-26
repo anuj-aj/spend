@@ -1,13 +1,23 @@
 table {
   width: 100%;
 }
-.select-btn {
-  background-color: #47d7ac;
-  color: #fff;
-  align-content: center;
+.headerTitle {
   display: flex;
   justify-content: center;
+  // background-color: silver;
+}
+.headerTitleInner {
+  // background-color: #f07878;
+}
+.select-btn {
+  background-color: #47d7ac;
+  color: black;
+  align-content: center;
+  display: flex;
+  font-size: large;
+  justify-content: center;
   flex-direction: column;
+  border-radius: 20px;
 }
 .details{
   text-align: center;

@@ -1,0 +1,30 @@
+.board{
+    padding: 20px;
+    width: 95%;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+  }
+.mat-grid-tile {
+    border-radius: 20px;
+    background-color: #ECECEC;
+    // padding: 20px;
+    // margin: 20px;
+    // border: 20px;
+}  
+.select-btn {
+  background-color: #47d7ac;
+  color: black;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  // background-color: silver;
+}
+.headerTitleInner {
+  // background-color: #f07878;
+}

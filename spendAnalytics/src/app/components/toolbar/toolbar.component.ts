@@ -71,20 +71,20 @@ export class ToolbarComponent implements OnInit, OnChanges {
 
   redirect(): void {
     const id = localStorage.getItem('accountId');
-    this.router.navigate([`dashboard/${id}`])
+    this.router.navigate([`/dashboard/${id}`])
   }
 
   goToProfile(): void {
     const id = localStorage.getItem('accountId');
-    this.router.navigate([`profile/${id}`])
+    this.router.navigate([`/profile/${id}`])
   }
 
   goToAnalytics():void {
-    this.router.navigate([`analytics`])
+    this.router.navigate([`/analytics`])
   }
 
   goToOffers():void {
-    this.router.navigate([`offers`])
+    this.router.navigate([`/offers`])
   }
 
 }
