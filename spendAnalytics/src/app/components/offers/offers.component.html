@@ -1,41 +1,69 @@
 <div class="headerTitle">
     <div class="headerTitleInner">
-        <button mat-raised-button class="select-btn">General Offers</button>
+        <button mat-raised-button class="select-btn">Customised Offers only for you</button>
     </div>
 </div>
 <div class="offerBoard">
-
     <mat-grid-list cols="2" rowHeight="155px" [gutterSize]="'20px'">
-        <mat-grid-tile>General Offer 1</mat-grid-tile>
-        <mat-grid-tile>General Offer 2</mat-grid-tile>
+        <mat-grid-tile>
+            <p>
+                <span style="color:#47d7ac; display:flex; justify-content:center">Customised Offer 1</span>
+            <br>
+            As per your banking, {{this.offerList[0].brandname}} offers you many discount on
+            {{this.offerList[0].offerDescription}}
+            <br>
+            <br>
+            Hurry up! Offer valid till {{this.offerList[0].offerValidity}}.
+            </p>    
+            
+
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <p>
+                <span style="color:#47d7ac; display:flex; justify-content:center">Customised Offer 2</span>
+            <br>
+            As per your banking, {{this.offerList[0].brandname}} offers you many discount on
+            {{this.offerList[0].offerDescription}}
+            <br>
+            <br>
+            Hurry up! Offer valid till {{this.offerList[0].offerValidity}}.
+            </p>    
+        </mat-grid-tile>
     </mat-grid-list>
 </div>
 <br>
 <br>
 <div class="headerTitle">
     <div class="headerTitleInner">
-        <button mat-raised-button class="select-btn">Custom Offers</button>
+        <button mat-raised-button class="select-btn">Bank Ongoing offers</button>
     </div>
 </div>
 <div class="offerBoard">
     <mat-grid-list cols="2" rowHeight="155px" [gutterSize]="'20px'">
-        <mat-grid-tile>Customised Offer 1
-            <br>
-            {{this.offerList[0].brandname}}
-            <br>
-            {{this.offerList[0].offerDescription}}
-            <br>
-            {{this.offerList[0].offerValidity}}
+        <mat-grid-tile>
+            <p>
+                <span style="color:#47d7ac; display:flex; justify-content:center">Bank offer 1</span>
+                <br>
+                Product: Debit card offer
+                <br>
+                <br>
+                Description: Get free upgrade to premium card
+                <br>
+                <br>
+                Offer Validity: Offer expires on 15 June 2022
+            </p>
         </mat-grid-tile>
-        <mat-grid-tile>Customised Offer 2
-            <br>
-            {{this.offerList[1].brandname}}
-            <br>
-            {{this.offerList[1].offerDescription}}
-            <br>
-            {{this.offerList[1].offerValidity}}
+        <mat-grid-tile>
+            <p>
+                <span style="color:#47d7ac; display:flex; justify-content:center">Bank offer 2</span>
+                <br>
+                Product: Credit card offer
+                <br>
+                <br>
+                Description: Redeem rewards on fuel purchase
+                <br><br>
+                Offer Validity: Offer expires on 20 June 2022
+            </p>
         </mat-grid-tile>
     </mat-grid-list>
-
-
 </div>

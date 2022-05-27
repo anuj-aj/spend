@@ -6,7 +6,11 @@
   background-image: url('./../../../assets/images/userface.jpg');
   background-size: cover;
 }
-
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  // background-color: silver;
+}
 .profile {
   display: flex;
   justify-content: center;

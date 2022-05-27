@@ -2,19 +2,19 @@ import { Brand } from "../model/transaction";
 
 export const Grofers: Brand = {
     brandname: "Zepto",
-    offerDescription: "Offer Zepto description",
+    offerDescription: "Zepto Big sale days",
     offerValidity: "15 June 2022",
     competitors:["BB DAILY","GROFERS INDIA P"]
 }
 export const Bigbasket: Brand = {
     brandname: "Bigbasket",
-    offerDescription: "Offer Bigbasket description",
+    offerDescription: "Bigbasket Big sale days",
     offerValidity: "15 June 2022",
     competitors:["Bigbasket","Zepto"]
 }
 export const GooglePay: Brand = {
     brandname: "GooglePay",
-    offerDescription: "Offer Gpay description",
+    offerDescription: "Gpay pay bill offer",
     offerValidity: "15 June 2022", 
     competitors:["PAYTM","Zepto"]
 }
