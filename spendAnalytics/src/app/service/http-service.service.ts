@@ -12,7 +12,7 @@ export class HttpServiceService {
   BASE_URL = `https://spend.herokuapp.com`;
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json',
-                                'Authorization': 'DirectLogin token=eyJhbGciOiJIUzI1NiJ9.eyIiOiIifQ.FqWSv-sznrXIvEOkeY_KLX-MLW2IO4XCvEaVJTpPels'       })
+                                'Authorization': 'DirectLogin token=eyJhbGciOiJIUzI1NiJ9.eyIiOiIifQ.ynvr0tMmJTMK0Xma4H02KRCH42jilp3PBqrQJX015sE'       })
   };
   httpOptions2 = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
