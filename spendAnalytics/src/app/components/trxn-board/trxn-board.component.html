@@ -6,7 +6,7 @@
 
 <div class="board">
   <!-- <button *ngIf="userName" mat-button class="select-btn" [disabled]>Welcome Account {{userName}}</button> -->
-  <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable"> Check Categories for Transactions</button>
+  <!-- <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable"> Check Categories for Transactions</button> -->
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -47,5 +47,7 @@
 
   <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[ 5, 10, 25, 100 ]">
   </mat-paginator>
-  <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable">Check Categories for Transactions</button>
+  <p>
+    <span style="display:flex; justify-content:center"><button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable">Check Categories for Transactions</button></span>
+  </p>
 </div>
