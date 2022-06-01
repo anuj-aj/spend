@@ -6,7 +6,7 @@
 
 <div class="board">
   <!-- <button *ngIf="userName" mat-button class="select-btn" [disabled]>Welcome Account {{userName}}</button> -->
-  <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable"> Display Category</button>
+  <button #btnid mat-raised-button (click)="addColumn()" class="select-btn" [hidden]="btnDisable"> Check Categories for Transactions</button>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
